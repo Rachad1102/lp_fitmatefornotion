@@ -1,0 +1,38 @@
+.poppins {
+    font-family: "Poppins", sans-serif;
+
+  }
+  .scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll-content {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+
+
+/* .scroll-item {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 200px; 
+  margin-right: 20px; 
+} */
+/* 
+.scroll-item img {
+  width: 100%;
+  height: auto;
+} */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+
+  }
+}

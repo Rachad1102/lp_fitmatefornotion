@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %>
+<body class="poppins">
+    <!-- navbar -->
+    <%- include('../partials/nav.ejs')  %>
+ <!-- card section -->
+<section class="w-11/12 mx-auto mt-24">
+    <div class="flex flex-col xl:flex-row flex-col-reverse gap-x-12 my-12">
+
+        <!-- cover -->
+        <div class="p-2 mt-8 shadow mb-4 rounded-lg border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
+            <img src="<%= discoverdb[id].cover %>" alt="" class="w-full h-full rounded-lg object-fill">
+        </div>
+
+        <div class="xl:w-2/5">
+            <a href="/discover" class="text-gray-800 my-4  text-sm lg:text-xl  items-center font-medium flex space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                
+                Browse</a>
+              <div class="mt-8">
+      
+                      <h1 class="text-2xl  font-semibold my-4"> <%= discoverdb[id].title %> </h1>
+
+                      <p class="mb-6 text-gray-600 text-justify text-sm md:text-base  leading-loozed">
+                          <%= discoverdb[id].description %>
+                      </p>
+
+                      <a href="<%= discoverdb[id].linkTemplates %>"  class="font-semibold flex space-x-2 text-center items-center justify-center text-white  py-4  inline-block px-8 bg-black rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                          </svg>
+                          
+                       <span> View Template</span>
+                    </a>
+      
+              </div>
+
+
+        </div>
+
+    </div>
+
+
+          <!-- others templates, same category -->
+          <div class="my-4"> 
+            <h1 class="text-xl md:text-2xl my-4 font-semibold">More like this</h1>
+            <% const filterPro = discoverdb.filter(conte => conte.category === discoverdb[id].category && conte.id != discoverdb[id].id) %>
+            
+            <% const genereTemplates = (content) =>{ %>
+              <% if (content.length > 0) { %>
+                <div class="my-6 gap-y-2 md:gap-y-4 md:gap-x-6 grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  justify-start">
+                      <% content.forEach( container => { %>
+                       <a  id="<%= container.category %>" href="/discover/<%= container.contractTitle %>" class="group relative block  w-fit ">
+                        <% if (container.isPremium) { %>
+                          <span class="rounded-full bg-black px-4 py-2 text-xs font-semibold absolute right-2 top-2 text-white">PRO</span>
+                        <% } %>
+                         <div class="p-2  shadow  mb-4 rounded-lg border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
+                           <img src="<%= container.cover %>" class="w-full h-full rounded-lg my-auto aspect-[8/5] object-contain" alt="<%= container.title %> cover"
+                           />
+                         </div>
+                         <h3 class="font-semibold text-base md:text-xl text-gray-700 my-2">
+                           <%= container.title %>
+                         </h3>
+                         <h5 class="font-medium text-gray-400 text-sm">
+                           <%= container.resume %>
+                
+                         </h5>
+                       </a>
+                      <% }) %>
+
+                
+            </div>
+            <% } else { %>
+                      
+              <div id="submit_req" class=" bg-gray-100 flex-col rounded-xl w-full md:h-[300px] h-[250px] space-x-8 flex justify-center items-center">
+                <div class="w-10/12 mx-auto flex flex-col justify-center items-center">
+                 <h1 class="font-semibold text-2xl md:text-4xl mb-4 text-center ">No similar templates found.</h1>
+                 <h3 class="text-gray-400 font-medium md:text-xl text-center text-sm mb-4">We're adding new content every month. In the meantime, keep browsing in our main library.</h3>
+                 <a href="/templates" class="bg-black py-2 w-fit mb-2 px-8 rounded-lg font-medium md:text-base text-sm text-white">Browse all</a>
+             </div>
+             </div>
+            <%   } %>
+            <%   } %>
+            <%  genereTemplates(filterPro) %>
+          </div>
+    
+    <%- include('../partials/newsletter.ejs') %>
+</section>
+
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

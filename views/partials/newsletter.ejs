@@ -1,0 +1,33 @@
+    <!-- newsletter -->
+    <div class="my-12">
+
+        <div class="max-w-11/12 my-4">
+          <h1 class="text-2xl leading-relaxed font-semibold sm:text-4xl">Get the latest Notion tutorials and templates.</h1>
+          <p class="mt-4 text-gray-500">
+            Sign up to receive the latest Notion tips and resources directly in your inbox.      </p>
+        </div>
+      
+        <form class="mb-0 mt-4 max-w-md space-y-4">
+           <div>
+            <label for="email" class="sr-only">Email</label>
+      
+            <input name="email" type="email" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm transition duration-300 border hover:border-gray-400" placeholder="Email Address *" required/>
+
+           </div>
+      
+            <button id="subs_btn" onclick="event.preventDefault();
+             document.getElementById('subscribe_popup').classList.remove('opacity-0');
+            document.getElementById('subscribe_popup').classList.remove('translate-y-full');
+            setTimeout(() =>{
+              document.getElementById('subscribe_popup').classList.add('opacity-0');
+             document.getElementById('subscribe_popup').classList.add('translate-y-full');
+
+            }, 1500)
+
+"  class="inline-block lg:w-2/3 w-full rounded-lg bg-black px-5 py-3 text-sm font-medium text-white">Subscribe Free</button>
+        </form>
+        <p class="mt-4 text-sm text-gray-500 font-medium">No spam. Unsubscribe anytime</p>
+       </div>
+  
+       <!-- popup - message de reception du mail -->
+       <aside id="subscribe_popup" class="fixed bottom-4 translate-y-full opacity-0 font-semibold  transition duration-300 start-4 z-50 flex items-center justify-center gap-4 rounded-lg bg-[#37413A] px-5 py-3 text-white">Thank you for registering! </aside>

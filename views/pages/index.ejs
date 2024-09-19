@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<%- include('../partials/head.ejs')  %>
+<body class="poppins">
+
+<!-- navbar -->
+    <%- include('../partials/nav.ejs')  %>
+    <section class="bg-white  w-11/12 mx-auto">
+
+<!-- first CTA -->
+
+<div class="container px-6 mt-24 mx-auto text-center">
+            <div class="w-11/12 md:w-5/6 mx-auto">
+                <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold lg:leading-[4.5rem] text-gray-800   poppins mb-6">Boost your productivity with efficient Notion templates.</h1>
+                <p class="mt-6 text-sm lg:text-xl font-medium text-gray-500  mb-6">Customizable templates to organize your projects, track your goals, wellness and more.</p>
+               <div class="flex  md:space-x-4 items-center flex-col md:flex-row justify-center">
+                <a href="/templates" class="px-8 py-4 mt-6 w-fit  text-sm lg:text-base font-medium leading-5 text-center transition-colors duration-300 text-white capitalize bg-black rounded-lg  lg:mx-0 lg:w-auto focus:outline-none">
+                  Get Starter Bundle
+              </a>
+                <a href="/templates" class="px-8 py-4 mt-6 w-fit text-sm lg:text-base font-medium leading-5 border border-gray-200 hover:border-gray-400 text-center transition-colors duration-300 text-black capitalize bg-gray-100 rounded-lg  lg:mx-0 lg:w-auto focus:outline-none">
+                    Browse Templates
+                </a>
+
+               </div>
+            </div>
+    
+            <!-- <div class="flex justify-center mt-10">
+<img class="object-cover w-full h-96 rounded-xl lg:w-4/5" src="/assets/image1.jpg" />
+            </div> -->
+        </div>
+
+<!-- presentation produits -->
+
+<div class="my-8">
+          <div class="flex justify-between text-end items-center mb-4">
+            <h2 class="font-bold text-xl lg:text-3xl">Featured</h2>
+            <a href="/templates" class="flex items-center text-sm lg:text-base  px-4 py-2  font-semibold text-gray-600 hover:text-gray-800 transition-colors space-x-8">
+
+             Explore All            
+            </a>
+          </div>
+
+          <div  class="my-6 gap-y-2 xl:gap-x-4 md:gap-y-4  grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  justify-start">
+            <!-- card template -->
+                  <!-- card by js -->
+                   <% for( let id = 0; id < 3; id++ ) { %>
+                    <% const container = content[id] %>
+                    <a  id="<%= container.category %>" href="/templates/<%= container.contractTitle %>" class=" m-4 group relative mx-auto md:mx-2 block  w-fit ">
+                      <% if (container.isPremium) { %>
+                        <span class="rounded-full bg-black px-4 py-2 text-xs font-semibold absolute right-2 top-2 text-white">PRO</span>
+                      <% } %>
+                       <div class="h-fit  shadow shadow-slate-200 mb-4 rounded-xl   border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
+                         <img src="<%= container.cover %>" class="my-auto aspect-[8/5] object-contain w-full h-full rounded-lg" alt="<%= container.title %> cover"
+                         />
+                       </div>
+                       <h3 class="font-semibold text-base md:text-xl text-gray-700 my-2">
+                         <%= container.title %>
+                       </h3>
+                       <h5 class="font-medium text-gray-400 text-sm">
+                         <%= container.resume %>
+              
+                       </h5>
+                     </a>
+                   <% } %>
+
+                
+          </div>
+         </div>
+
+  <!-- présentation starter bundle -->
+   <div class="w-full p-2 lg:p-6 bg-gray-100 rounded-xl  flex flex-col items-center">
+    <div>
+      <img src="/assets/nutrition.png" alt="starter bundle" class="w-full h-full object-cover">
+    </div>
+    <div class="w-full flex justify-between md:p-4  flex-col md:flex-row items-center space-y-4 md:space-x-4">
+      <div class="lg:w-3/4 md:w-3/5 w-full mt-6 ">
+        <h2 class="font-semibold mb-2 text-center md:text-start  lg:text-4xl ">Free Starter Bundle for Notion</h2>
+        <p class="lg:text-lg text-xs text-center md:text-start ">Get access to 5x Notion templates to start organizing your life.</p>
+      </div>
+      <a href="/templates" class="px-4 py-2 lg:px-8 lg:py-4  tracking-wider mt-6 w-fit   text-xs lg:text-base font-medium leading-5 text-center transition-colors duration-300 text-white capitalize bg-gray-900 rounded-lg  lg:mx-0 lg:w-auto focus:outline-none">
+        Get the Bundle
+    </a>
+    </div>
+   </div>
+
+<!-- testimonials -->
+
+<%- include('../partials/testimonials.ejs') %>
+
+<!-- FAQ -->
+
+<%- include('../partials/faq.ejs') %>
+
+<!-- second CTA -->
+
+<div class="container px-6 py-4 mx-auto text-center mt-4 mb-8">
+                <div class="w-11/12 md:w-5/6 mx-auto">
+                    <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold lg:leading-[4.5rem] text-gray-800  poppins mb-6"> Start Organizing Your Life, Elevate Your Productivity and Wellness.</h1>
+                    <p class="mt-6 text-sm lg:text-xl font-medium text-gray-500  mb-6">Start with our free templates and upgrade to pro templates when you're ready.</p>
+                   <div class="flex  md:space-x-4 items-center flex-col md:flex-row justify-center">
+                    <a href="/templates" class="px-8 py-4 mt-6 w-fit  text-sm lg:text-base font-medium leading-5 text-center transition-colors duration-300 text-white capitalize bg-black hover:bg-[#37413A] rounded-lg  lg:mx-0 lg:w-auto focus:outline-none">
+                      Browse Templates
+                  </a>
+                   </div>
+                </div>
+        
+                <!-- <div class="flex justify-center mt-10">
+    <img class="object-cover w-full h-96 rounded-xl lg:w-4/5" src="/assets/image1.jpg" />
+                </div> -->
+            </div>
+</section>
+
+<!-- footer  -->
+
+  <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

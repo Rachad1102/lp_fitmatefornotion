@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('../partials/head.ejs') %>
+  <body class="poppins">
+    <!-- navbar -->
+    <%- include('../partials/nav.ejs') %>
+    <!-- card section -->
+    <div class="w-11/12 mx-auto">
+
+      <!-- form -->
+      <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-md text-center my-12">
+          <h1 class="text-3xl font-bold md:text-4xl">Submit a Request</h1>
+      
+          <p class="mt-4 md:text-base text-sm  text-gray-500">
+            Have an idea for Notion but can't find a relevant tutorial or template? Submit a request, and we might make it happen.
+          </p>
+        </div>
+      
+        <form  class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+          <div>
+            <label for="name" class="sr-only">Name</label>
+            <div class="relative">
+              <input
+                type="text"
+                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm transition duration-300 border hover:border-gray-400 "
+                placeholder="First name *" required
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="sr-only">Email</label>
+      
+            <div class="relative">
+              <input
+                type="email"
+                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm transition duration-300 border hover:border-gray-400"
+                placeholder="Email Address *" required
+              />
+            </div>
+          </div>
+      
+          <div>
+            <label for="message" class="sr-only">Message</label>
+      
+            <div class="relative">
+
+              <textarea name="Message" placeholder="Message *" id="" cols="10" rows="5" required class="transition duration-300 border hover:border-gray-400 w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm resize-none"></textarea>
+            </div>
+          </div>
+      
+          <div>      
+            <button onclick="event.preventDefault();
+            document.getElementById('submit_req').classList.remove('opacity-0');
+           document.getElementById('submit_req').classList.remove('translate-y-full');
+           setTimeout(() =>{
+             document.getElementById('submit_req').classList.add('opacity-0');
+            document.getElementById('submit_req').classList.add('translate-y-full');
+
+           }, 1500)
+
+"  class="inline-block w-full rounded-lg bg-black px-5 py-3 text-sm font-medium text-white">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+       <!-- popup - message de reception du mail -->
+       <aside id="submit_req" class="fixed bottom-4 translate-y-full opacity-0 font-semibold  transition duration-300 start-4 z-50 flex items-center justify-center gap-4 rounded-lg bg-[#37413A] px-5 py-3 text-white">Thank you for your request, we'll response you soon. </aside>
+    <%- include('../partials/footer.ejs') %>
+
+  </body>
+</html>

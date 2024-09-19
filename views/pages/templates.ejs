@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('../partials/head.ejs') %>
+  <body class="poppins">
+    <!-- navbar -->
+    <%- include('../partials/nav.ejs') %>
+    <!-- card section -->
+<section class="w-11/12 mx-auto">
+<div>
+  <h1 class="mt-24 mb-6 md:text-4xl text-2xl text-[#37413A] font-semibold">Templates</h1>
+  <h5 class="font-medium text-gray-400 md:text-base text-sm w-11/12 md:w-1/2">
+    Discover ready-made Notion templates and setups for wellness and life.
+  </h5>
+
+</div>
+ 
+
+  <!-- search input      -->
+
+   <div class="relative md:w-3/5 w-5/6 mt-6">
+  <!-- <label for="Search" class="sr-only"> Search </label> -->
+  <input
+    type="text"
+    id="Search"
+    placeholder="Search for..."
+    class="w-full ps-10 md:text-lg rounded-full border-gray-200 border bg-gray-100 py-2.5  pe-10  text-xs focus:outline-none"
+  />
+
+  <span class="absolute inset-y-0 start-0 grid w-10 place-content-center">
+    <button type="button" id="search_btn" class="text-gray-600 hover:text-gray-700">
+      <span class="sr-only">Search</span>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-4"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+        />
+      </svg>
+    </button>
+  </span>
+   </div>
+
+<!-- filter buttons -->
+ <div id="categorys_btn" class="flex gap-4 w-11/12 mt-6 flex-wrap">
+   <a  id="All" class="block rounded-lg border border-gray-200 px-6 cursor-pointer py-3 text-xs md:text-base  font-semibold text-white bg-black ">All</a>
+   <a  id="Productivity" class="block rounded-lg border border-gray-200 cursor-pointer px-6 py-3 text-xs md:text-base font-semibold text-black" >Productivity</a>
+   <a id="Nutrition" class="block rounded-lg border border-gray-200 px-6 cursor-pointer py-3 text-xs md:text-base font-semibold text-black" >Nutrition</a>
+   <a  id="Fitness" class="block rounded-lg border border-gray-200 px-6 cursor-pointer py-3 text-xs md:text-base font-semibold text-black " >Fitness</a>
+   <a id="Mindfulness" class="block rounded-lg border border-gray-200 cursor-pointer px-6 py-3 text-xs md:text-base font-semibold text-black" >Mindfulness</a>
+</div>
+
+<!-- templates view -->
+      <div id="content_templates" class="my-6 gap-y-2 xl:gap-x-4 md:gap-y-4  grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  justify-start">
+        <!-- card template -->
+              <!-- card by js -->
+              <% const genereTemplates = (content) =>{ %>
+                <% if (content.length > 0) { %>
+                  <% content.forEach( container => { %>
+                   <a  id="<%= container.category %>" href="/templates/<%= container.contractTitle %>" class=" group relative mx-auto md:mx-2 block  mt-4 w-fit ">
+                   
+                    <% if (container.isPremium) { %>
+                      <span class="rounded-full bg-black px-4 py-2 text-xs font-medium tracking-wider absolute right-2 top-2 text-white">PRO</span>
+                    <% } %>
+
+                     <div class="p-2 shadow-md mb-2 rounded-lg border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
+                       <img src="<%= container.cover %>" class="my-auto aspect-[8/5] object-contain w-full h-full rounded-lg" alt="<%= container.title %> cover"
+                       />
+                     </div>
+                     <h3 class="font-semibold text-base md:text-xl text-gray-700 mt-2">
+                       <%= container.title %>
+                     </h3>
+                     <h5 class="font-normal text-gray-400 text-sm">
+                       <%= container.resume %>
+            
+                     </h5>
+                   </a>
+                  <% }) %>
+                 <% } %>
+                <%   } %>
+                <%  genereTemplates(content) %>
+            
+      </div>
+
+<!-- if error exists, show the request's card -->      
+   <div id="submit_req" class=" hidden bg-gray-100 flex-col rounded-xl w-full md:h-[400px] h-[250px] space-x-8 flex justify-center items-center">
+     <div class="w-10/12 mx-auto flex flex-col justify-center items-center">
+      <h1 class="font-semibold text-2xl md:text-4xl mb-4 text-center ">Couldn't you find what you were looking for?</h1>
+      <h3 class="text-gray-400 font-medium md:text-xl text-sm mb-4">Suggest an idea of our next tutorial, template.</h3>
+      <a href="/request" class="bg-black py-2 w-fit mb-2 px-8 rounded-lg font-medium md:text-base text-sm text-white">Submit a request</a>
+  </div>
+  </div>
+
+  <!-- form form_newsletter -->
+
+  <%- include('../partials/newsletter.ejs') %>
+
+</section>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
