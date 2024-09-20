@@ -12,7 +12,9 @@
   display: flex;
   animation: scroll 10s linear infinite;
 }
-
+.outfit{
+    font-family: "Outfit", sans-serif;
+}
 
 
 /* .scroll-item {
