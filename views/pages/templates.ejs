@@ -7,17 +7,16 @@
     <%- include('../partials/nav.ejs') %>
     <!-- card section -->
 <section class="w-11/12 mx-auto">
-<div>
+    <div>
   <h1 class="mt-24 mb-6 md:text-4xl text-2xl text-[#37413A] font-semibold">Templates</h1>
   <h5 class="font-medium text-gray-400 md:text-base text-sm w-11/12 md:w-1/2">
     Discover ready-made Notion templates and setups for wellness and life.
   </h5>
 
-</div>
+    </div>
  
 
   <!-- search input      -->
-
    <div class="relative md:w-3/5 w-5/6 mt-6">
   <!-- <label for="Search" class="sr-only"> Search </label> -->
   <input
@@ -49,16 +48,17 @@
   </span>
    </div>
 
-<!-- filter buttons -->
- <div id="categorys_btn" class="flex gap-4 w-11/12 mt-6 flex-wrap">
+ <!-- filter buttons -->
+     <div id="categorys_btn" class="flex gap-4 w-11/12 mt-6 flex-wrap">
    <a  id="All" class="block rounded-lg border border-gray-200 px-6 cursor-pointer py-3 text-xs md:text-base  font-semibold text-white bg-black ">All</a>
    <a  id="Productivity" class="block rounded-lg border border-gray-200 cursor-pointer px-6 py-3 text-xs md:text-base font-semibold text-black" >Productivity</a>
+   <a  id="Education" class="block rounded-lg border border-gray-200 cursor-pointer px-6 py-3 text-xs md:text-base font-semibold text-black" >Education</a>
    <a id="Nutrition" class="block rounded-lg border border-gray-200 px-6 cursor-pointer py-3 text-xs md:text-base font-semibold text-black" >Nutrition</a>
    <a  id="Fitness" class="block rounded-lg border border-gray-200 px-6 cursor-pointer py-3 text-xs md:text-base font-semibold text-black " >Fitness</a>
    <a id="Mindfulness" class="block rounded-lg border border-gray-200 cursor-pointer px-6 py-3 text-xs md:text-base font-semibold text-black" >Mindfulness</a>
-</div>
+    </div>
 
-<!-- templates view -->
+ <!-- templates view -->
       <div id="content_templates" class="my-6 gap-y-2 xl:gap-x-4 md:gap-y-4  grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  justify-start">
         <!-- card template -->
               <!-- card by js -->
@@ -90,7 +90,7 @@
             
       </div>
 
-<!-- if error exists, show the request's card -->      
+  <!-- if error exists, show the request's card -->      
    <div id="submit_req" class=" hidden bg-gray-100 flex-col rounded-xl w-full md:h-[400px] h-[250px] space-x-8 flex justify-center items-center">
      <div class="w-10/12 mx-auto flex flex-col justify-center items-center">
       <h1 class="font-semibold text-2xl md:text-4xl mb-4 text-center ">Couldn't you find what you were looking for?</h1>
@@ -100,9 +100,8 @@
   </div>
 
   <!-- form form_newsletter -->
-
   <%- include('../partials/newsletter.ejs') %>
-
+  
 </section>
 
     <%- include('../partials/footer.ejs') %>

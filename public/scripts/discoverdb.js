@@ -29,7 +29,7 @@ const discovers = [
     },
     {
       id: 3,
-      title: "Ultimate Meal Planer Navigation",
+      title: "Ultimate Meal Planner Navigation",
       contractTitle : "meal-planner-navigation",
       category: "Nutrition",
       cover: "/assets/discovers/navigation_ulti_meal_planner.png",
