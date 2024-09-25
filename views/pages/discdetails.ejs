@@ -9,7 +9,7 @@
     <div class="flex flex-col xl:flex-row flex-col-reverse gap-x-12 my-12">
 
         <!-- cover -->
-        <div class="p-2 mt-8 shadow mb-4 rounded-lg border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
+        <div class="p-2 mt-8 shadow mb-4 rounded-lg xl:w-fit xl:mx-auto border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
             <img src="<%= discoverdb[id].cover %>" alt="" class="w-full h-full rounded-lg object-fill">
         </div>
 
@@ -22,7 +22,7 @@
                 Browse</a>
               <div class="mt-8">
       
-                      <h1 class="text-2xl  font-semibold my-4"> <%= discoverdb[id].title %> </h1>
+                      <h1 class="md:text-3xl text-xl font-semibold md:font-bold my-4"> <%= discoverdb[id].title %> </h1>
 
                       <p class="mb-6 text-gray-600 text-justify text-sm md:text-base  leading-loozed">
                           <%= discoverdb[id].description %>
