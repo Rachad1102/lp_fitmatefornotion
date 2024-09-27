@@ -45,7 +45,7 @@
                   <!-- card by js -->
                    <% for( let id = 0; id < 3; id++ ) { %>
                     <% const container = content[id] %>
-                    <a  id="<%= container.category %>" href="/templates/<%= container.contractTitle %>" class=" m-4 group relative mx-auto md:mx-2 block  w-fit ">
+                    <a  id="<%= container.category %>" href="/templates/<%= container.contractTitle %>" class=" m-4 group relative mx-auto md:mx-2 block  w-10/12 sm:w-8/12 md:w-fit ">
                       <% if (container.isPremium) { %>
                         <span class="rounded-full bg-black px-4 py-2 text-xs font-semibold absolute right-2 top-2 text-white">PRO</span>
                       <% } %>

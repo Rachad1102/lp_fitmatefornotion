@@ -7,16 +7,20 @@ const discoverdb = require('./public/scripts/discoverdb');
 
 const app = express();
 
-app.set('view engine', 'ejs');
 
 app.listen(5500);
 
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
+//mongo db
 
+//routes
 app.get('/discover', (req, res) => {
   res.render('pages/discover', {title: 'Fitmate Discover', content : discoverdb})
 })
+
 
 app.get('/request', (req, res) => {
   res.render('pages/request', {title: 'Fitmate - Master Notion for Wellness and Life'})
@@ -48,14 +52,12 @@ app.get('/discover/:contract', (req, res) => {
 
 app.get('/', (req, res) => {
     res.render('pages/index', {title: 'Fitmate - Master Notion for Wellness and Life', content} );
-});
+})
+
 app.get('/privacy_policy', (req, res) => {
     res.render('pages/privacy', {title: 'Fitmate - Privacy Policy'} );
-});
-
-
-
+})
 
 app.use('*', (req, res) => {
-  res.render('pages/404', {title: '404 - Error Page'} );
-});
+  res.status(404).render('pages/404', {title: '404 - Error Page'} );
+})
