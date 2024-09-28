@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %>
+<body class="poppins">
+    <!-- navbar -->
+    <%- include('../partials/nav.ejs')  %>
+ <!-- card section -->
+<section class="w-10/12 mx-auto mt-24">
+    <div class="flex flex-col gap-4 my-12">
+        <a href="/templates" class="text-gray-800  text-sm lg:text-xl  items-center font-medium flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+          
+          Templates</a>
+        <div class="flex md:flex-row flex-col md:items-center md:justify-between my-4  gap-4">
+            <div>
+
+                <h1 class="lg:text-5xl text-3xl   font-semibold my-4"> Life Planner </h1>
+                <h2 class="text-sm md:text-base text-gray-400 font-medium my-4">Good vibes</h2>
+                <div class="font-semibold md:font-bold text-4xl md:text-4xl outfit flex items-start"><span class="inline-block text-base">$</span>9</div>
+            </div>
+        <a href="https://rachadfitmate.gumroad.com/l/ppfch" target="_blank" rel="noopener noreferrer" class="text-sm md:text-xl text-white text-center font-semibold py-4 md:h-fit  inline-block px-8 bg-black rounded-lg">Purchase now</a>
+
+        </div>
+        <!-- cover -->
+        <div class="p-2 w-full shadow mb-4 rounded-lg border transition ease-out duration-300 border-gray-100 group-hover:border-gray-200">
+            <img src="/assets/covers/recipe_book.png" alt="" class="w-full h-full rounded-lg object-fill">
+        </div>
+        <!-- description -->
+         <div>
+            <h1 class="my-4 md:text-3xl text-base font-semibold">Description</h1>
+            <div class="my-4 text-gray-600 text-sm md:text-base font-medium leading-loozed">
+                This model, inspired by <span class="font-semibold">Tiago Forte</span>'s PARA method, centralizes all your personal and professional information in a comprehensive management space. <br>
+               <span class="font-semibold my-2 inline-block text-lg">Key features : </span>
+                <ul class="list-disc list-inside mb-4">
+                    <li>All-In-One Dashboard</li>
+                    <li>Goal Setting</li>
+                    <li>Project & Task Management</li>
+                    <li>Note-Taking System</li>
+                    <li>Quotes & Highlights</li>
+                    <li>Reading List</li>
+                </ul>
+                Organize every aspect of your life with the Life Planner. Designed to capture all important information (notes, projects, goals), it helps you structure your daily thoughts and tasks with interconnected databases.
+            </div>
+         </div>
+         <!-- category_update -->
+          <div class="my-4 flex gap-8">
+            <div>
+                <h3 class="md:text-sm text-xs text-gray-400 font-medium">Category</h3>
+                <p class=" text-sm md:text-base my-2 font-medium ">Productivity</p>
+            </div>
+            <div>
+                <h3 class="md:text-sm text-xs text-gray-400 font-medium">Last Updated</h3>
+                <p class=" text-sm md:text-base my-2 font-medium ">Jan 29, 2024</p>
+            </div>
+          </div>
+
+    </div>
+    <%- include('../partials/newsletter.ejs') %>
+</section>
+
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

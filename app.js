@@ -50,6 +50,11 @@ app.get('/discover/:contract', (req, res) => {
     
   })
 
+
+app.get('/show', (req, res) => {
+    res.render('pages/voiraffichage', { title: 'Fitmate - Showing' } );
+})
+
 app.get('/', (req, res) => {
     res.render('pages/index', {title: 'Fitmate - Master Notion for Wellness and Life', content} );
 })

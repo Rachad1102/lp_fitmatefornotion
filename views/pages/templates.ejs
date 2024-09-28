@@ -62,7 +62,7 @@
         <!-- card template -->
               <!-- card by js -->
               <% const genereTemplates = (content) =>{ %>
-                <% if (content.length > 0) { %>
+                <% if (content.length > 0 ) { %>
                   <% content.forEach( container => { %>
                    <a  id="<%= container.category %>" href="/templates/<%= container.contractTitle %>" class=" group relative mx-auto md:mx-2 block  mt-4 w-fit ">
                    
@@ -77,7 +77,7 @@
                      <h3 class="font-semibold text-base md:text-xl text-gray-700 mt-2">
                        <%= container.title %>
                      </h3>
-                     <h5 class="font-normal text-gray-400 text-sm">
+                     <h5 class="text-gray-400 text-sm">
                        <%= container.resume %>
             
                      </h5>

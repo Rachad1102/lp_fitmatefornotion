@@ -17,7 +17,7 @@
             <div>
 
                 <h1 class="lg:text-5xl text-3xl   font-semibold my-4"> <%= content[id].title %> </h1>
-                <h2 class="text-sm md:text-base text-gray-400 font-normal my-4"><%= content[id].resume %></h2>
+                <h2 class="text-sm md:text-base text-gray-400 font-medium my-4"><%= content[id].resume %></h2>
                 <div class="font-semibold md:font-bold text-4xl md:text-4xl outfit flex items-start"><span class="inline-block text-base">$</span><%= content[id].price %></div>
             </div>
         <a href="https://rachadfitmate.gumroad.com/l/ppfch" target="_blank" rel="noopener noreferrer" class="text-sm md:text-xl text-white text-center font-semibold py-4 md:h-fit  inline-block px-8 bg-black rounded-lg">Purchase now</a>
@@ -29,10 +29,10 @@
         </div>
         <!-- description -->
          <div>
-            <h1 class="my-4 md:text-3xl text-base font-semibold">Description</h1>
-            <p class="my-4 text-gray-600 text-sm font-medium leading-loozed">
-                <%= content[id].description %>
-            </p>
+            <h1 class="my-4 md:text-2xl text-base font-semibold">Description</h1>
+            <div class="my-4 text-gray-600 font-medium leading-loozed">
+                <%- content[id].description %>
+            </div>
          </div>
          <!-- category_update -->
           <div class="my-4 flex gap-8">

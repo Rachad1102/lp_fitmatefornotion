@@ -1,4 +1,5 @@
 
+
 //menu responsive fonction 
 const btnOpen = document.getElementById('btnOpen');
 const menuMobile = document.getElementById('menu-mobile');
@@ -88,8 +89,6 @@ if(!hasResults){
     submitReq.classList.add('hidden');
 }
 })
-
-
 
 
  
