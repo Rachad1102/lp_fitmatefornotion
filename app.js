@@ -13,8 +13,10 @@ const app = express();
 //connect to mongodb
 const dbURI = 'mongodb+srv://rachadfousseni55:chfUkVDek5oLdsRY@requests.tz9ng.mongodb.net/requests';
 mongoose.connect(dbURI)
-.then((result) => app.listen(5500))
+.then((result) => console.log('connexion to mongodb successful'))
 .catch((err) => console.log(err))
+
+app.listen(5500)
 
 //register view engine
 app.set('view engine', 'ejs');
@@ -42,7 +44,7 @@ app.post('/request', (req, res) => {
 
 //view in a pages the requests
 
-app.get('/mywebsiteviews_databaseRequests&111002Abd', (req, res) =>{
+app.get('/viewsdbserequestfitfnotionrachadabd', (req, res) =>{
 
   Request.find().sort({createdAt: -1})
   .then((result) =>{
