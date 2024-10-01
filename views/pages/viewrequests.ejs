@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')  %>
+<body class="poppins">
+    <!-- navbar -->
+    <%- include('../partials/nav.ejs')  %>
+ <!-- card section -->
+ <div class="grid h-screen place-content-center bg-white px-4">
+  <div class="text-center">
+    <div class="blogs content w-11/12 mx-auto">
+        <h2>All Requests</h2>
+        <% if(requests.length > 0) { %>
+            <% requests.forEach(request => { %> 
+                <div class="single my-4 rounded-xl p-4 bg-gray-100/50 shadow-md  font-medium inline-block w-fit mx-auto">
+                    <h3 class="surname" > <%= request.surname %></h3>
+                    <p class="email text-sm text-blue-600"><%= request.email  %></p>
+                    <p class="message text-xs mt-4"><%= request.message  %></p>
+                </div>
+
+            <%  }); %>
+
+            
+        <%    } else{ %>
+            <p>There are no requests to display</p>
+            <%  } %>
+    </div>
+
+  </div>
+</div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
