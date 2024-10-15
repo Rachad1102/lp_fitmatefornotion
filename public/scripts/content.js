@@ -10,7 +10,7 @@ const templates = [
       contractTitle: "meal-planner",
       cover: "/assets/covers/nutrition-planner-cover.png",
       linkGumroad: "gumroad.com",
-      simpleDate: "Aug 25, 2024"
+      simpleDate: "Oct 12, 2024"
     },
     {
       id: 1,
@@ -113,7 +113,7 @@ const templates = [
       description: "This model helps you keep track of your daily meals and nutritional impact, helping you to stay in control of your diet. <br> Keep track of your meals with this easy-to-use food diary. Record each meal, the calories consumed and analyze your eating habits to better understand and improve your daily diet.",
       price: 0,
       cover: "/assets/covers/food-journal.png",
-      linkGumroad: "gumroad.com",
+      linkGumroad: "https://rachadfitmate.gumroad.com/l/bioox",
       simpleDate: "Aug 25, 2024"
     },
     {
@@ -152,7 +152,7 @@ const templates = [
       description: "This template stores, organizes and categorizes all your recipes for quick and easy access, allowing you to sort by dish type or occasion. <br> Simplify your recipe management with this Notion model. Classify your recipes by dish type, cooking time or occasion, and quickly find your favorite dishes to impress your guests or make a success of your everyday meals.",
       price: 0,
       cover: "/assets/covers/recipe-book.png",
-      linkGumroad: "gumroad.com",
+      linkGumroad: "https://rachadfitmate.gumroad.com/l/vtwuau",
       simpleDate: "Aug 25, 2024"
     },
     {
